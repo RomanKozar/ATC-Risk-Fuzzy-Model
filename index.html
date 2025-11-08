@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Система оцінювання ризику авіадиспетчерів</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>
+					Інтелектуальна модель оцінювання ризику професійної діяльності
+					авіадиспетчерів залежно від рівня ментального здоров'я
+				</h1>
+			</header>
+
+			<div class="content">
+				<div class="section">
+					<h2>Модель визначення рівня втомленості (I_fa)</h2>
+					<div class="input-group">
+						<label>Кількість авіадиспетчерів:</label>
+						<input
+							type="number"
+							id="numControllers"
+							min="1"
+							max="20"
+							value="5"
+							onchange="generateFatigueTable()"
+						/>
+					</div>
+					<div id="fatigueTableContainer"></div>
+				</div>
+
+				<div class="section">
+					<h2>Експертний метод оцінювання ментального здоров'я (MH_a)</h2>
+					<div class="criteria-list">
+						<div class="criteria-item">
+							<strong>K₁:</strong> Когнітивна витривалість (1-10)
+						</div>
+						<div class="criteria-item">
+							<strong>K₂:</strong> Емоційна стабільність (1-10)
+						</div>
+						<div class="criteria-item">
+							<strong>K₃:</strong> Фізіологічна стійкість (1-10)
+						</div>
+						<div class="criteria-item">
+							<strong>K₄:</strong> Якість відпочинку (1-10)
+						</div>
+						<div class="criteria-item">
+							<strong>K₅:</strong> Психоемоційна адаптація (1-10)
+						</div>
+						<div class="criteria-item">
+							<strong>K₆:</strong> Швидкість відновлення після стресу (1-10)
+						</div>
+						<div class="criteria-item">
+							<strong>K₇:</strong> Мотиваційний рівень (1-10)
+						</div>
+						<div class="criteria-item">
+							<strong>K₈:</strong> Комунікативна спроможність (1-10)
+						</div>
+					</div>
+					<div id="mentalTableContainer"></div>
+				</div>
+
+				<div class="button-group">
+					<button onclick="calculateRisk()">🔬 Розрахувати ризик</button>
+					<button onclick="clearData()">🗑️ Очистити дані</button>
+				</div>
+
+				<div class="section results" id="resultsSection" style="display: none">
+					<h2>Результати оцінювання</h2>
+					<div id="resultsContainer"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
