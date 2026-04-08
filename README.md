@@ -2,6 +2,9 @@
 
 Це веб-додаток, розроблений для оцінки рівня професійного ризику авіадиспетчерів. Модель використовує **нечітку логіку (Fuzzy Logic)**, поєднуючи оцінку **середньої втомленості** та **ментального здоров'я** для визначення кількісного та лінгвістичного рівня ризику.
 
+[![Live Demo](https://img.shields.io/badge/demo-online-blue.svg?style=for-the-badge)](https://romankozar.github.io/ATC-Risk-Fuzzy-Model/)
+[![Version](https://img.shields.io/badge/version-1.0.0-orange.svg?style=for-the-badge)](https://github.com/RomanKozar/ATC-Risk-Fuzzy-Model/releases)
+
 ![Головна сторінка](preview.png)
 
 ### 📜 Структура Проекту
